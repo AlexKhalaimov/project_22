@@ -10,6 +10,37 @@
     <link rel="stylesheet" href="css/responsive.css">
     <script  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/main.js" charset="utf-8"></script>
+    <!-- Pixel Glass -->
+    <style>
+    HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    /* background-image: url( "img/index-mobile.png" ); */
+    }
+    /* Планшет */
+    @media ( min-width: 760px ) {
+    HTML {
+      /* Планшетный макет */
+      /* background-image: url( "img/index-tablet.png" ); */
+    }
+    }
+    /* Десктоп */
+    @media ( min-width: 960px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/glav.jpg" );
+    }
+    }
+
+    BODY {
+    opacity: .5;
+    }
+    </style>
+    <link rel="stylesheet" href="../../node_modules/pixel-glass/styles.css">
+    <script src="../../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
+
 </head>
 <body>
     <div class="wrapper">
@@ -93,9 +124,9 @@
             </div>
         </section><!-- section-top -->
         <section class="section-services">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+            <div class="container px-0">
+                <div class="row mx-0">
+                    <div class="col px-0">
                         <h2 class="services__title section-title">Наши  <span>Услуги</span></h2>
                         <div class="services">
                             <div class="service">
@@ -144,9 +175,9 @@
             </div>
         </section><!-- section-services -->
         <section class="section-advantages">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col ">
                         <h2 class="advantages__title section-title"><span>Наши</span> преимущества</h2>
                         <div class="advantages">
                             <div class="advantageItem">
@@ -187,15 +218,15 @@
             </div>
         </section><!-- section-advantages -->
         <section class="section-comments">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
+            <div class="container px-0">
+                <div class="row mx-0">
+                    <div class="col px-0 text-center">
                         <h2 class="comments__title section-title">Отзывы <span>клиентов</span></h2>
                         <div class="comments">
                             <div class="comment">
                                 <div class="comment__customer">
-                                    <div class="comment__content">
-                                        <p class="comment__text">Cпасибо менеджеру Александру за сотрудничество, технику заказывали несколько раз, никаких замечаний нету.</p>
+                                    <div class="comment__content comment__content_mr30">
+                                        <p class="comment__text comment__text_mb10">Cпасибо менеджеру Александру за сотрудничество, технику заказывали несколько раз, никаких замечаний нету.</p>
                                         <div class="comment__meta">
                                             <span class="comment__name">ФФУ Продакшн</span>
                                             <span class="comment__date">06.12.2017.</span>
@@ -204,8 +235,8 @@
                                     </div>
                                     <div class="comment__logo"><img src="img/logo_ffu.png" alt="ffu-logo" class="comment__img"></div>
                                 </div>
-                                <div class="comment__reply">
-                                    <div class="comment__content">
+                                <div class="comment__reply comment__reply_flSt">
+                                    <div class="comment__content ">
                                         <p class="comment__text">Александр, нам бесконечно приятно получать такие положительные отзывы от наших клиентов! Благодарим Вас за то, что пользуетесь услугами нашей компании! Мы сделаем все возможное, чтобы и в дальнейшем наше сотрудничество оставляло у Вас только положительные эмоции! Успехов и процветания Вашей компании!</p>
                                         <div class="comment__meta">
                                             <span class="comment__name">С уважением, команда Сантранс!</span>
@@ -216,19 +247,19 @@
                                 </div>
                             </div><!-- comment -->
                             <div class="comment">
-                                <div class="comment__customer">
+                                <div class="comment__customer comment__customer_flSt">
                                     <div class="comment__content">
                                         <p class="comment__text">Пользовались услугами по переезду офиса. Только положительные эмоции. Работа менеджера на высоком уровне, машины прибыли вовремя, без опозданий, грузчики грамотные ребята, знают свою работу. Без лишних вопросов разобрали, упаковали мебель, оперативно загрузили и выгрузили. Поэтому, фирме желаю успехов в дальнейшем развитии, а всем кто планирует переезжать, обращайтесь в данную фирму, не пожалеете!</p>
                                         <div class="comment__meta">
                                             <span class="comment__name">ПРОМА ПЛЮС</span>
-                                            <span class="comment__date">17.12.2017.</span>
+                                            <span class="comment__date">13.12.2017.</span>
                                         </div>
                                         <img src="img/triangle.png" alt="" class="comment__triangle comment__triangle_left">
                                     </div>
                                     <div class="comment__logo comment__logo_proma"><img src="img/logo_proma.png" alt="proma-logo" class="comment__img"></div>
                                 </div>
-                                <div class="comment__reply">
-                                    <div class="comment__content">
+                                <div class="comment__reply comment__reply_mt10">
+                                    <div class="comment__content comment__content_ml28">
                                         <p class="comment__text">Благодарим Вас за такой замечательный отзыв! Мы искренне рады, что у Вас остались только приятные эмоции после сотрудничества с нашей командой. Для нас очень важно, чтобы Вам с нами было просто и надежно:). Успехов и процветания Вашей компании! </p>
                                         <div class="comment__meta">
                                             <span class="comment__name">С уважением, команда Сантранс!</span>
@@ -239,15 +270,15 @@
                                 </div>
                             </div><!-- comment -->
                         </div><!-- comments -->
-                        <div class="btn btn-services text-center">Все отызвы</div>
+                        <div class="btn btn-services">Все отызвы</div>
                     </div>
                 </div>
             </div>
         </section><!-- section-comments -->
         <section class="section-about">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+            <div class="container px-0">
+                <div class="row mx-0">
+                    <div class="col px-0">
                         <h2 class="about__title section-title"><span>О</span> компании</h2>
                         <div class="about">
                             <figure class="about__figure"><img src="img/truck.jpg" alt="truck" class="about__img"></figure>
@@ -263,9 +294,9 @@
             </div>
         </section><!-- section-about -->
         <section class="section-autopark">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+            <div class="container px-0">
+                <div class="row mx-0">
+                    <div class="col px-0">
                         <h2 class="autopark__title section-title">Наш <span>автопарк</span></h2>
                         <div class="autopark">
                             <figure class="autopark__figure"><img src="img/gallery/truck1.jpg" alt="" class="autopark__img"></figure>
