@@ -790,3 +790,6 @@ footer {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+.footerContacts__link {
+  line-height: 21px; }
