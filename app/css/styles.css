@@ -706,9 +706,10 @@ nav {
 /*----- FOOTER -----*/
 footer {
   background-color: #e8e8e8;
-  padding: 50px 0; }
+  padding: 40px 0 25px; }
   footer a, footer p {
-    color: #7c7c7c; }
+    color: #7c7c7c;
+    line-height: 20px; }
 
 .footerLogo {
   max-width: 190px; }
@@ -721,12 +722,15 @@ footer {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-left: 20px; }
 
 .footerMenu {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%; }
+  .footerMenu__item {
+    margin-bottom: 15px; }
 
 .footerContacts {
   display: -webkit-box;
@@ -736,7 +740,7 @@ footer {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-left: 70px; }
+  margin-left: 87px; }
 
 .footerContacts__location {
   display: -webkit-box;
@@ -767,7 +771,7 @@ footer {
           justify-content: space-between;
   line-height: 19px;
   margin-left: -20px;
-  padding-left: 20px; }
+  padding-left: 12px; }
 
 .footerContacts__phonesContainer {
   display: -webkit-box;
@@ -819,7 +823,8 @@ footer {
 .footerContacts__text {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
-          align-self: flex-end; }
+          align-self: flex-end;
+  font-size: 14px; }
 
 .footerContacts__paradigma {
   display: -webkit-box;
@@ -833,3 +838,7 @@ footer {
 
 .footerContacts__link {
   line-height: 21px; }
+
+/*----- SECTION-MAP -----*/
+.section-map {
+  padding: 0; }

@@ -597,9 +597,10 @@ nav{
 
 footer{
     background-color: #e8e8e8;
-    padding: 50px 0;
+    padding: 40px 0 25px;
     a,p{
         color: $colorText;
+        line-height: 20px;
     }
 }
 
@@ -610,16 +611,21 @@ footer{
 .footerMenus{
     display: flex;
     justify-content: space-between;
+    padding-left: 20px;
 }
 
 .footerMenu{
     flex-basis: 50%;
+
+    &__item{
+        margin-bottom: 15px;
+    }
 }
 
 .footerContacts{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 70px;
+    margin-left: 87px;
 }
 
 .footerContacts__location{
@@ -641,7 +647,7 @@ footer{
     justify-content: space-between;
     line-height: 19px;
     margin-left: -20px;
-    padding-left: 20px;
+    padding-left: 12px;
 }
 
 .footerContacts__phonesContainer{
@@ -679,6 +685,7 @@ footer{
 
 .footerContacts__text{
     align-self: flex-end;
+    font-size: 14px;
 }
 
 .footerContacts__paradigma{
@@ -688,4 +695,11 @@ footer{
 
 .footerContacts__link{
     line-height: 21px;
+}
+
+
+/*----- SECTION-MAP -----*/
+
+.section-map{
+    padding: 0;
 }
