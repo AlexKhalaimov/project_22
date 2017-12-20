@@ -1,3 +1,15 @@
+function initMap() {
+        var centerMap = {lat: 50.509148, lng: 30.462962};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: centerMap
+        });
+        var marker = new google.maps.Marker({
+          position: centerMap,
+          map: map
+      });
+}
+
 $(function(){
 
     /*  dropdown menu hover*/
@@ -27,17 +39,20 @@ $(function(){
 
     /*---- mobile menu init ----*/
 
-    /*$("#mobile-menu").mmenu({
-               "slidingSubmenus": false,
-               "extensions": [
-                  "pagedim-black"
-               ],
-               "offCanvas": {
-                  "position": "left"
-               },
+    if ($('#mobileMenu').length != 0) {
+        $("#mobileMenu").mmenu({
+                   "slidingSubmenus": false,
+                   "extensions": [
+                      "pagedim-black"
+                   ],
+                   "offCanvas": {
+                      "position": "right"
+                   },
 
-              "navbar": {
-                  "title": ""
-              }
-          }); */
+                  "navbar": {
+                      "title": ""
+                  }
+              });
+    }
+
 });

@@ -32,6 +32,14 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close_menu:before {
+  content: "\e90a";
+  color: #315aed;
+}
+.icon-menu:before {
+  content: "\e90b";
+  color: #315aed;
+}
 .icon-box:before {
   content: "\e900";
   color: #315aed;

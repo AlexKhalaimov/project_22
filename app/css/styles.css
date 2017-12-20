@@ -20,6 +20,14 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-close_menu:before {
+  content: "\e90a";
+  color: #315aed; }
+
+.icon-menu:before {
+  content: "\e90b";
+  color: #315aed; }
+
 .icon-box:before {
   content: "\e900";
   color: #315aed; }
@@ -116,7 +124,13 @@ body {
   font-family: 'Open Sans', 'Arial', sans-serif; }
 
 section {
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 60px 0; }
+
+footer {
+  margin: 0 auto;
+  max-width: 1920px; }
 
 ul {
   display: block;
@@ -333,6 +347,132 @@ nav {
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
+
+/*----- mobile menu styles -----*/
+.mobileMenu, .mobileMenu__open {
+  display: none; }
+
+a[href='#wrapperHome'] {
+  display: inline-block; }
+
+.icon-close_menu {
+  display: none;
+  font-size: 30px;
+  height: 30px;
+  width: 30px; }
+
+.icon-close_menu:hover {
+  font-weight: 700; }
+
+.mobileList__link {
+  color: #7c7c7c;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.mobileSubmenu__link {
+  color: #7c7c7c;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.mobileList__link:hover, .mobileSubmenu__link:hover {
+  color: #315aed; }
+
+.mobileList__item .mobileList-contacts {
+  display: none; }
+
+.mobileList-form {
+  display: none;
+  padding: 10px 10px 10px 20px; }
+
+.mobileList-form input::-webkit-input-placeholder {
+  color: #bababa;
+  font-size: 14px;
+  font-weight: 400; }
+
+.mobileList-form input:-moz-placeholder {
+  color: #bababa;
+  font-size: 14px;
+  font-weight: 400; }
+
+.mobileList-form input::-moz-placeholder {
+  color: #bababa;
+  font-size: 14px;
+  font-weight: 400; }
+
+.mobileListr-form input:-ms-input-placeholder {
+  color: #bababa;
+  font-size: 14px;
+  font-weight: 400; }
+
+.mobileList-form input:-moz-placeholder, input::-moz-placeholder {
+  opacity: 1; }
+
+.mobileList-form__input {
+  border: 1px solid #ddd;
+  padding-left: 15px;
+  width: 70%; }
+
+.mobileList-contacts {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobileList-contacts i {
+    font-size: 32px;
+    margin-right: 9px;
+    vertical-align: middle; }
+
+.mobileList__multiLang {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobileList__multiLang .multilang__ua {
+    margin-right: 15px; }
+
+.mobileList__icon {
+  font-size: 30px;
+  margin-right: 20px; }
+
+.mobileList-phones {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.mobileList_phone {
+  color: #7c7c7c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px; }
+  .mobileList_phone:hover {
+    color: #7c7c7c;
+    text-decoration: underline; }
+
+.btn-holder {
+  text-align: center; }
+
+.mobileList-btn {
+  background-color: #315aed;
+  -webkit-border-radius: 17px;
+          border-radius: 17px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 6px 20px !important;
+  text-transform: uppercase; }
 
 /*----- SECTION-TOP -----*/
 .section-top {
@@ -665,7 +805,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.about__figure img {
+.about__img {
   width: 100%;
   min-width: 417px; }
 
@@ -700,8 +840,11 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.autopark__figure {
+.autopark__link {
   margin-bottom: 19px; }
+
+.autopark__img {
+  width: 100%; }
 
 /*----- FOOTER -----*/
 footer {
@@ -740,7 +883,7 @@ footer {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-left: 87px; }
+  margin-left: 80px; }
 
 .footerContacts__location {
   display: -webkit-box;
@@ -750,7 +893,11 @@ footer {
   -webkit-flex-basis: 40%;
       -ms-flex-preferred-size: 40%;
           flex-basis: 40%;
-  margin-right: 20px; }
+  margin-right: 20px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
   .footerContacts__location span {
     line-height: 50px; }
 
@@ -762,15 +909,19 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-basis: 60%;
-      -ms-flex-preferred-size: 60%;
-          flex-basis: 60%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-flex-basis: 52%;
+      -ms-flex-preferred-size: 52%;
+          flex-basis: 52%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   line-height: 19px;
   margin-left: -20px;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
   padding-left: 12px; }
 
 .footerContacts__phonesContainer {
@@ -786,6 +937,12 @@ footer {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.fb-bottom {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3; }
 
 .footerContacts .icon-placeholder-futer, .footerContacts .icon-telephone, .footerContacts .icon-email {
   font-size: 30px;
@@ -806,7 +963,11 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 15px 0 50px; }
+  margin: 15px 0 50px;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+      -ms-flex-order: 4;
+          order: 4; }
 
 .footerContacts__copyright {
   display: -webkit-box;
@@ -818,6 +979,10 @@ footer {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-ordinal-group: 6;
+  -webkit-order: 5;
+      -ms-flex-order: 5;
+          order: 5;
   width: 100%; }
 
 .footerContacts__text {
@@ -841,4 +1006,13 @@ footer {
 
 /*----- SECTION-MAP -----*/
 .section-map {
+  margin: 0 auto;
+  max-width: 1920px;
   padding: 0; }
+
+.map__title {
+  display: none; }
+
+.map {
+  height: 354px;
+  width: 100%; }

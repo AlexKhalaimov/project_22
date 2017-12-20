@@ -6,22 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/lightbox/lightbox.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/main.js" charset="utf-8"></script>
+
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapperHome">
         <header>
             <div class="container ">
                 <div class="row">
-                        <div class="col-md-4 pl-0">
+                        <div class="col-md-4 pl-0 col-sm-4 col-xs-6">
                             <div class="header-logo">
                                 <a href="#" class="header-logo__link"><img src="img/logo.svg" alt="company-logo" class="header-logo__img"></a>
                             </div>
                         </div>
-                        <div class="col-md-8 pr-0 ">
+                        <div class="col-md-8 pr-0 col-sm-8 col-xs-6">
                             <div class="header-content d-flex">
                                 <form action="#" class="header-form">
                                     <button type="submit" name="button" class="header-form__submit"><i class="icon-search-symbol"></i></button>
@@ -43,13 +44,14 @@
                                 <div class="fb fb-top">
                                     <a href="#" class="fb__link"><i class="icon-facebook"></i></a>
                                 </div>
+                                <div class="mobileMenu__open"><a href="#mobileMenu" class="mobileMenu__link"><i class="icon-menu"></i></a></div>
                             </div>
                         </div>
                 </div>
                 <div class="row">
                     <div class="col px-0">
                         <div class="header-bottom">
-                            <nav >
+                            <nav>
                                 <ul class="nav__list ">
                                     <li class="nav__item"><a href="#" class="nav__link">главная</a></li>
                                     <li class="nav__item dropdown">
@@ -73,6 +75,56 @@
                                     <li class="nav__item"><a href="#" class="nav__link">о компании</a></li>
                                     <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
                                 </ul>
+                                <div class="mobileMenu" id="mobileMenu">
+
+                                    <ul class="mobileList">
+                                        <li class="mobileList__item"><a href="#wrapperHome" class="mobileList__link"><i class="icon-close_menu"></i></a></li>
+                                        <li class="mobileList__item">
+                                            <form action="#" class="mobileList-form">
+                                                <input type="text" class="mobileList-form__input" placeholder="Найти...">
+                                                <button type="submit" name="button" class="mobileList-form__submit"><i class="icon-search-symbol"></i></button>
+                                            </form>
+                                        </li>
+                                        <li class="mobileList__item"><a href="#" class="mobileList__link">главная</a></li>
+                                        <li class="mobileList__item">
+                                            <a href="#" class="mobileList__link">услуги</a>
+                                            <ul class="mobileSubmenu">
+                                                <li class="mobileSubmenu__item"><a href="#" class="mobileSubmenu__link">Грузоперевозки по Киеву и области</a></li>
+                                                <li class="mobileSubmenu__item"><a href="#" class="mobileSubmenu__link">Грузоперевозки по Украине</a></li>
+                                                <li class="mobileSubmenu__item"><a href="#" class="mobileSubmenu__link">Спецтехника</a></li>
+                                                <li class="mobileSubmenu__item"><a href="#" class="mobileSubmenu__link">Мувинг</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mobileList__item"><a href="#" class="mobileList__link">отзывы</a></li>
+                                        <li class="mobileList__item"><a href="#" class="mobileList__link">о компании</a></li>
+                                        <li class="mobileList__item"><a href="#" class="mobileList__link">контакты</a></li>
+                                        <li class="mobileList__item">
+                                            <div class="mobileList-contacts">
+                                                <span><i class="icon-telephone"></i></span>
+                                                <div class="mobileList-phones">
+                                                    <a href="tel:+380443313818" class="mobileList_phone">+38 (044) 331 38 18</a>
+                                                    <a href="tel:+380443313833" class="mobileList_phone">+38 (044) 331 38 33</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mobileList__item">
+                                            <div class="mobileList__multiLang">
+                                                <i class="icon-translate mobileList__icon"></i>
+                                                <span class="multilang__ua">UA</span>
+                                                <span class="multiLang__ru">RU</span>
+                                            </div>
+                                        </li>
+                                        <li class="mobileList__item">
+                                            <div class="fb mobileList-fb">
+                                                <a href="#" class="fb__link"><i class="icon-facebook"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="mobileList__item btn-holder">
+                                            <div class="btn mobileList-btn">заказать звонок</div>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </nav>
                         </div>
                     </div>
@@ -202,7 +254,7 @@
                                         </div>
                                         <img src="img/triangle.png" alt="" class="comment__triangle comment__triangle_left">
                                     </div>
-                                    <div class="comment__logo"><img src="img/logo_ffu.png" alt="ffu-logo" class="comment__img"></div>
+                                    <div class="comment__logo comment__logo_client"><img src="img/logo_ffu.png" alt="ffu-logo" class="comment__img"></div>
                                 </div>
                                 <div class="comment__reply">
                                     <div class="comment__content ">
@@ -225,7 +277,7 @@
                                         </div>
                                         <img src="img/triangle.png" alt="" class="comment__triangle comment__triangle_left">
                                     </div>
-                                    <div class="comment__logo comment__logo_proma"><img src="img/logo_proma.png" alt="proma-logo" class="comment__img"></div>
+                                    <div class="comment__logo comment__logo_client"><img src="img/logo_proma.png" alt="proma-logo" class="comment__img"></div>
                                 </div>
                                 <div class="comment__reply comment__reply_mt10">
                                     <div class="comment__content comment__content_ml28">
@@ -235,7 +287,7 @@
                                         </div>
                                         <img src="img/triangle.png" alt="" class="comment__triangle comment__triangle_right">
                                     </div>
-                                    <div class="comment__logo"><img src="img/logo_company.png" alt="company logo" class="comment__img"></div>
+                                    <div class="comment__logo comment__logo_company"><img src="img/logo_company.png" alt="company logo" class="comment__img"></div>
                                 </div>
                             </div><!-- comment -->
                         </div><!-- comments -->
@@ -268,18 +320,18 @@
                     <div class="col px-0">
                         <h2 class="autopark__title section-title">Наш <span>автопарк</span></h2>
                         <div class="autopark">
-                            <figure class="autopark__figure"><img src="img/gallery/truck1.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck2.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck3.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck4.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck5.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck6.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck7.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck8.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck9.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck10.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck11.jpg" alt="" class="autopark__img"></figure>
-                            <figure class="autopark__figure"><img src="img/gallery/truck4.jpg" alt="" class="autopark__img"></figure>
+                            <a href="img/gallery/truck1.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck1.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck2.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck2.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck3.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck3.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck4.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck4.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck5.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck5.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck6.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck6.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck7.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck7.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck8.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck8.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck9.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck9.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck10.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck10.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck11.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck11.jpg" alt="" class="autopark__img"></a>
+                            <a href="img/gallery/truck4.jpg" class="autopark__link" data-lightbox="trucks"><img src="img/gallery/truck4.jpg" alt="" class="autopark__img"></a>
                         </div>
                     </div>
                 </div>
@@ -288,12 +340,12 @@
         <footer>
             <div class="container px-0">
                 <div class="row mx-0">
-                    <div class="col-md-2 px-0">
+                    <div class="col-md-2 px-0 col-lg-2">
                         <div class="footerLogo">
                             <a href="#" class="footerLogo__link"><img src="img/logo.svg" alt="company-logo" class="footerLogo__img"></a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5 col-lg-4 col-sm-6">
                         <div class="footerMenus">
                             <ul class="footerMenu">
                                 <li class="footerMenu__item"><a href="#" class="footerMenu__link">Главная</a></li>
@@ -309,7 +361,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 px-0">
+                    <div class="col-md-5 px-0 col-lg-6 col-sm-6">
                         <div class="footerContacts">
                             <div class="footerContacts__location">
                                 <span><i class="icon-placeholder-futer"></i></span>
@@ -321,9 +373,10 @@
                                     <a href="tel:+380443313818" class="footerContacts__phone">+38 (044) 331 38 18</a>
                                     <a href="tel:+380443313833" class="footerContacts__phone">+38 (044) 331 38 33</a>
                                 </div>
-                                <div class="fb fb-bottom">
-                                    <a href="#" class="fb__link"><i class="icon-facebook"></i></a>
-                                </div>
+
+                            </div>
+                            <div class="fb fb-bottom">
+                                <a href="#" class="fb__link"><i class="icon-facebook"></i></a>
                             </div>
                             <div class="footerContacts__mailto">
                                 <span><i class="icon-email"></i></span>
@@ -342,10 +395,19 @@
             </div>
         </footer>
         <section class="section-map">
-            <div class="map">
-                <img src="img/map.jpg" alt="">
+            <h2 class="map__title">Гугл карта с расположением офиса</h2>
+            <div class="map" id="map">
             </div>
         </section>
     </div>
+    <script  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="libs/jquery-2.2.4/jquery-2.2.4.min.js" charset="utf-8"></script>
+    <script src="libs/mmenu/jquery.mmenu.all.js" charset="utf-8"></script>
+    <script src="libs/lightbox/lightbox.min.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJhDRXQmaiDkn_kyO2sr-0vzSHbZqnz_4&callback=initMap">
+    </script>
+
 </body>
 </html>
